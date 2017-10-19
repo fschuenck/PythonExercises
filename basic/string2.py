@@ -37,11 +37,7 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-    match = re.search(r'(.*)(not.*bad)(.*)', s)
-    if match:
-        return match.group(1) + 'good' + match.group(3)
-    else:
-        return s
+    return re.sub('not.*bad', 'good', s)
 
 
 # F. front_back
