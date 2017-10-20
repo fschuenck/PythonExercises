@@ -20,10 +20,7 @@ import math
 # Return the resulting string.
 def verbing(s):
     if len(s) >= 3:
-        if s[-3:] == 'ing':
-            return s + 'ly'
-        else:
-            return s + 'ing'
+        return s + 'ly' if s[-3:] == 'ing' else s + 'ing'
     else:
         return s
 
@@ -50,7 +47,6 @@ def not_bad(s):
 def front_back(a, b):
     cuta = math.ceil(len(a)/2)
     cutb = math.ceil(len(b)/2)
-
     return a[:cuta] + b[:cutb] + a[cuta:] + b[cutb:]
 
 
