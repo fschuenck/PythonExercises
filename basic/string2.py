@@ -19,10 +19,7 @@ import math
 # If the string length is less than 3, leave it unchanged.
 # Return the resulting string.
 def verbing(s):
-    if len(s) >= 3:
-        return s + 'ly' if s[-3:] == 'ing' else s + 'ing'
-    else:
-        return s
+    return s + 'ly' if s[-3:] == 'ing' else re.sub(r'(\w{3,})', r'\1ing', s)
 
 
 # E. not_bad

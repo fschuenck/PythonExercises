@@ -29,10 +29,7 @@ def linear_merge(list1, list2):
         else:
             mylist.append(list2.pop(0))
 
-    mylist.extend(list1)
-    mylist.extend(list2)
-
-    return mylist
+    return mylist + list1 + list2
 
 # Note: the solution above is kind of cute, but unforunately list.pop(0)
 # is not constant time with the standard python list implementation, so
