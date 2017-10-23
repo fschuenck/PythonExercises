@@ -16,20 +16,13 @@
 def remove_adjacent(nums):
     return list(set(nums))
 
+
 # E. Given two lists sorted in increasing order, create and return a merged
 # list of all the elements in sorted order. You may modify the passed in lists.
 # Ideally, the solution should work in "linear" time, making a single
 # pass of both lists.
 def linear_merge(list1, list2):
-    mylist = []
-
-    while list1 and list2:
-        if list1[0] < list2[0]:
-            mylist.append(list1.pop(0))
-        else:
-            mylist.append(list2.pop(0))
-
-    return mylist + list1 + list2
+    return sorted(list1 + list2)
 
 # Note: the solution above is kind of cute, but unforunately list.pop(0)
 # is not constant time with the standard python list implementation, so
